@@ -17,12 +17,14 @@ ASTNode *Parser::expr() {
             switch (op.front()) {
             case '+':
                 // Implement Add class and uncomment this line
-                // root = new Add(root, term());
+                //root = new Add(root, term());
+    
                 return nullptr;
                 break;
             case '-':
                 // Implement Sub class and uncomment this line
                 //root = new Sub(root, term());
+            
                 return nullptr;
                 break;
             default:
@@ -51,8 +53,8 @@ ASTNode *Parser::term() {
                 break;
             case '/':
                 // Implement Div class and uncomment this line
-                //root = new Div(root, prim());
-                return nullptr;
+                // root = new Div(root, prim());
+                return root;
                 break;
             default:
                 return root;
@@ -75,8 +77,8 @@ ASTNode *Parser::prim() {
         break;
     case Token::Name:
         // Implement Variable class and uncomment this line
-        // node = new Variable(lexer_.get_name());
-        return nullptr;
+        node = new Variable(lexer_.get_name());
+        return node;
         break;
     default:
         break;
